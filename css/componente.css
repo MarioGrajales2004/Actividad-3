@@ -1,0 +1,102 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal {
+    background-color: #1e1e1e;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #333;
+}
+
+.contenedor-principal h1 { margin-top: 0; color: #ffffff; }
+.contenedor-principal p { color: #888; margin-bottom: 30px; }
+
+.botones-lista { display: flex; flex-direction: column; gap: 15px; }
+
+.botones-lista button {
+    background-color: transparent;
+    color: #cccccc;
+    border: 1px solid #444;
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.botones-lista button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.modal-metal {
+    background-color: #ffffff;
+    color: #000000;
+    width: 90%;
+    max-width: 380px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    animation: zoomIn 0.3s ease;
+}
+
+.modal-icono {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.modal-guitarra .modal-titulo { color: #e74c3c; }
+.modal-bajo .modal-titulo { color: #3498db; }
+.modal-bateria .modal-titulo { color: #2ecc71; }
+.modal-teclado .modal-titulo { color: #9b59b6; }
+
+.modal-titulo {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.modal-texto {
+    font-size: 15px;
+    color: #444;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.modal-nota {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
